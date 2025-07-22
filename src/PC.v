@@ -1,6 +1,6 @@
 module PC(
 input clk,
-input rst,//�ߵ�ƽ��Ч
+input rst,//高电平有效
 input ena,
 input busy,
 input [31:0] addr_in,
@@ -13,7 +13,7 @@ always@(negedge clk,posedge rst)
 begin
 if (rst && ena)
     pc_reg=32'h00400000;
-else if (ena)  //else if (ena && ！busy)  乘除指令多周期
+else if (ena)
     pc_reg=addr_in;
 end
 endmodule
