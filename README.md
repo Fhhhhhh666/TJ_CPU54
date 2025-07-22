@@ -34,6 +34,8 @@ cd project
 ```bash
 vivado -mode tcl -source ../scripts/create_project.tcl
 ```
+- 如果卡了,就在任务管理器中结束任务，重新再试一次
+
 
 ## 提醒
 - `mips_54_mars_simulate_student_ForWeb_2024.coe` 增加了对中断的检验，需要注意中断后的跳转（实验指导书会给出异常函数处理地址）
