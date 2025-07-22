@@ -7,6 +7,7 @@ set PART          xc7a100tcsg324-1
 set SRC_DIR       ../src
 set XDC_DIR       ../constraints
 set SIM_DIR       ../sim
+set IP_DIR        ../src/ip
 
 # —— 脚本区 —— 
 
@@ -40,13 +41,18 @@ foreach f $sim_files {
     puts "Added SIM: $f"
 }
 
-# 5. 设定顶层模块
+# 5. 添加 IP 核文件 (*.xci)
+set ip_files [glob -nocomplain "$IP_DIR/*.xci"]
+foreach f $ip_files {
+    add_files $f
+    puts "Added IP: $f"
+}
+
+# 6. 设定顶层模块
 set_property top $TOP_MODULE [current_fileset]
 
-# 6. 更新编译次序并保存
+# 7. 更新编译次序并保存
 update_compile_order -fileset sources_1
 
-# 7.显式保存项目
-save_project_as $PROJECT_NAME
-
-puts "\n✅ Vivado project '$PROJECT_NAME' created successfully."
+puts "\n Vivado project '$PROJECT_NAME' created successfully."
+exit
