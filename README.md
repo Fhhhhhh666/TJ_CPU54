@@ -51,5 +51,3 @@ vivado -mode tcl -source ../scripts/create_project.tcl
     - 删掉了`PC`模块的busy信号
 
     仓库的代码都是修改后的已提交且AC的代码。如果想尝试乘除指令多周期的，可以根据注释改回去。
-## 最后
-好心人，给个star吧 :grin:
