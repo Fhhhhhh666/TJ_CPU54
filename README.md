@@ -14,7 +14,7 @@
 使用**Verilog HDL**语言实现54条MIPS指令的单周期CPU的设计和仿真。
 
 具体设计思路可以参考仓库内的 [数据通路图](https://github.com/Fhhhhhh666/TJ_CPU54/blob/main/%E6%95%B0%E6%8D%AE%E9%80%9A%E8%B7%AF.png)，由于只采用了二选一多路选择器，所以设计图比较复杂:
-[数据通路图](https://github.com/Fhhhhhh666/TJ_CPU54/blob/main/%E6%95%B0%E6%8D%AE%E9%80%9A%E8%B7%AF.png)
+![数据通路图](https://github.com/Fhhhhhh666/TJ_CPU54/blob/main/%E6%95%B0%E6%8D%AE%E9%80%9A%E8%B7%AF.png)
 
 ## 下载与使用
 1. 克隆项目：
